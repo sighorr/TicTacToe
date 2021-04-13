@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="557.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Actions">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Play" />
+              <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Quit" />
+                  <MenuItem fx:id="timer" mnemonicParsing="false" onAction="#menuClickHandler" text="Timer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#menuClickHandler" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="How To Play" />
+            </items>
+          </Menu>
+                    <Menu mnemonicParsing="false" text="Gamemodes">
+            <items>
+            	<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Easy Singleplayer" />
+            	<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Hard Singleplayer" />
+            	<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Multiplayer" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GridPane fx:id="gameBoard" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="b1" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" />
+            <Button fx:id="b2" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="1" />
+            <Button fx:id="b3" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="2" />
+            <Button fx:id="b4" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.rowIndex="1" />
+            <Button fx:id="b5" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="b6" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="b7" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.rowIndex="2" />
+            <Button fx:id="b8" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="b9" mnemonicParsing="false" onAction="#buttonClickHandler" prefHeight="166.0" prefWidth="166.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <HBox fx:id="timerBox" prefHeight="75.0" prefWidth="135.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <TextArea fx:id="timerText" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="textX" prefHeight="200.0" prefWidth="250.0" />
+            <TextArea fx:id="textO" prefHeight="200.0" prefWidth="250.0" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

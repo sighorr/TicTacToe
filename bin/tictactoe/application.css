@@ -1,0 +1,31 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*
+ * Program Name: applicaton.css
+ * Name: Simon Orr
+ * Date: January 5th, 2021
+ * Description: TicTacToe game in JavaFX with the Extras: manual timer and a score of how many times X and O individually have won
+ */
+.button{
+	-fx-focus-color: transparent;
+	-fx-background-insets:-1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: white;
+	-fx-background-color:black;
+	-fx-border-color: white;
+}
+
+.winning-button {
+	-fx-background-color: radial-gradient(radius 100%, white, lightblue, violet);
+	-fx-text-fill: red;
+}
+.textArea{
+	-fx-background-insets:-1, 0, 1, 1;
+	-fx-font-weight: bold;
+	-fx-font-size: 36;
+	-fx-text-fill: blue;
+	-fx-background-color: black;
+	-fx-border-color: white;
+	-text-align: center;
+	-fx-focus-color: black;
+}
